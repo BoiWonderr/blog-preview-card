@@ -1,0 +1,170 @@
+:root {
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray: hsl(0, 0%, 50%);
+    --clr-black: hsl(0, 0%, 7%);
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+body, html {
+    font-size: 16px;
+    font-family: "Figtree", sans-serif;
+    background-color: var(--clr-yellow);
+
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    place-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "banner"
+    "content"
+    "content"
+    "content"
+    "profile"
+    "links";
+    grid-template-rows: 250px 30px 35px 120px 55px 15px;
+}
+
+.card {
+    height: 31.313em;
+    width: 20.438em;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    outline: var(--clr-black) solid 1px;
+    box-shadow: 10px 10px var(--clr-black);
+}
+
+.img-wrapper {
+    display: grid;
+    grid-area: banner;
+    /*justify-content: center;
+    align-items: center;*/
+    height: 15.625em;
+    place-items: center;
+}
+
+
+.banner {
+    background-image: url("assets/images/illustration-article.svg");  
+    height: 12.5em;
+    width: 17.438em;
+    border-radius: 10px;
+}
+
+.img-container img {
+    border-radius: 10px;
+}
+
+.content-wrapper{
+    display: grid;
+    width: 17.688em;
+    height: 11.25em;
+    margin-left: 1.375rem;
+}
+
+.button {
+    width: 4.563em;
+    height: 1.625em;
+    border-radius: 4px;
+    background-color: var(--clr-yellow);
+}
+
+.button p {
+    font-size: 14px;
+    font-weight: 800;
+    margin: auto;
+    text-align: center;
+    line-height: 1.625rem;
+} 
+
+.date {
+    font-size: 14px;
+}
+
+.content-wrapper h1 {
+    font-size: 1.25rem;
+    margin-top: -0.063rem;
+}
+.content-wrapper h1:hover{
+    color: var(--clr-yellow);
+    cursor: pointer;
+}
+
+.desc {
+    color: var(--clr-gray);
+    font-weight: lighter;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: -0.063rem;
+}
+
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 40px 90px;
+    grid-template-rows: 40px;
+    grid-area: profile;
+    width: 12.5em;
+    height: 2.5em;
+    margin-left: 1.375rem;
+    margin-top: 0.938rem;
+}
+.img-profile {
+    height: 2em;
+    width: 2em;
+    margin-top: 0.313rem;
+}
+.author {
+    font-weight: 800;
+    font-size: 0.875rem;
+}
+
+header {
+    grid-area: links;
+    height: 0.9375em;
+}
+
+.attribution { font-size: 0.688rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+
+@media (min-width: 1440px){
+    .grid {
+        grid-template-rows: 250px 30px 35px 120px 75px 15px;
+    }
+    .card {
+        height: 32.625em;
+        width: 24em;
+    }
+    .banner {
+        height: 12.5em;
+        width: 21em;
+    }
+    .button {
+        width: 5.125em;
+        height: 1.813em;
+    }
+    .button p {
+        line-height: 1.813rem;
+    }
+    .content-wrapper h1 {
+        font-size: 1.5rem;
+    }
+    .desc {
+        width: 21.25em;
+        font-size: 1rem;
+        line-height: 1.563rem;
+    }
+    .profile-wrapper {
+        margin-top: 1.875rem;
+    }
+}
